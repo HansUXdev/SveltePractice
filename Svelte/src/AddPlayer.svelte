@@ -16,8 +16,14 @@
   };
 </script>
 
-<form on:submit={onSubmit} class="grid-3">
-  <input type="text" placeholder="Player Name" bind:value={player.name} />
-  <input type="number" placeholder="Player Points" bind:value={player.points} />
-  <input type="submit" class="btn btn-primary" value="Add Player" />
+<form class="form-inline" on:submit={onSubmit}>
+  <div class="form-group mb-2">
+    <label for="name" class="sr-only">Email</label>
+    <input type="text" class="form-control" placeholder="Player Name"  id="name"  bind:value={player.name} />
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="points" class="sr-only">Password</label>
+    <input type="number" class="form-control" id="points" placeholder="Player Points" bind:value={player.points} />
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Add Player</button>
 </form>
