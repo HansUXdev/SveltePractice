@@ -28,11 +28,14 @@
 <div class="container">
 	<AddPlayer on:addPlayer={addPlayer}/>
 
-	{#if players.length ===0}
+	{#if players.length === 0 }
 		<p>No Players</p>
 		{:else}
 			{#each players as player}
-				<Player name={player.name} points={player.points}/>
+				<Player 
+					name={player.name} 
+					points={player.points}
+				/>
 			{/each}
 	{/if}
 </div>
